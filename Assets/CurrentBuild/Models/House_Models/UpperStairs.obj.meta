@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: ef44ef5790a1c3343aeb0cdff9e8ef02
+timeCreated: 1480640200
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BannisterBoard6_SmallStaircase2
+    100002: SmallStaircase2__Hall_SupportPillar13
+    100004: SmallStaircase2__Hall_SupportPillar14
+    100006: SmallStaircase2_BannisterBigPylon7
+    100008: SmallStaircase2_BannisterBigPylon8
+    100010: SmallStaircase2_BannisterBoard7
+    100012: SmallStaircase2_BannisterBoard8
+    100014: SmallStaircase2_BannisterSmallPylon32
+    100016: SmallStaircase2_BannisterSmallPylon33
+    100018: SmallStaircase2_BannisterSmallPylon34
+    100020: SmallStaircase2_BannisterSmallPylon35
+    100022: SmallStaircase2_BannisterSmallPylon36
+    100024: SmallStaircase2_BannisterSmallPylon37
+    100026: SmallStaircase2_BannisterSmallPylon38
+    100028: SmallStaircase2_BannisterSmallPylon39
+    100030: SmallStaircase2_BannisterSmallPylon40
+    100032: SmallStaircase2_BannisterSmallPylon41
+    100034: SmallStaircase2_BannisterSmallPylon42
+    100036: SmallStaircase2_BannisterSmallPylon43
+    100038: SmallStaircase2_BannisterSmallPylon44
+    100040: SmallStaircase2_SmallStairs
+    100042: SmallStaircase2_SmallStairs1
+    100044: SmallStaircase2_SmallStairs_SidePanel
+    100046: SmallStaircase2_SmallStairs_SidePanel1
+    100048: SmallStaircase2_smallStairsFloors
+    100050: SmallStaircase2_StairsDownPylon1
+    100052: //RootNode
+    400000: BannisterBoard6_SmallStaircase2
+    400002: SmallStaircase2__Hall_SupportPillar13
+    400004: SmallStaircase2__Hall_SupportPillar14
+    400006: SmallStaircase2_BannisterBigPylon7
+    400008: SmallStaircase2_BannisterBigPylon8
+    400010: SmallStaircase2_BannisterBoard7
+    400012: SmallStaircase2_BannisterBoard8
+    400014: SmallStaircase2_BannisterSmallPylon32
+    400016: SmallStaircase2_BannisterSmallPylon33
+    400018: SmallStaircase2_BannisterSmallPylon34
+    400020: SmallStaircase2_BannisterSmallPylon35
+    400022: SmallStaircase2_BannisterSmallPylon36
+    400024: SmallStaircase2_BannisterSmallPylon37
+    400026: SmallStaircase2_BannisterSmallPylon38
+    400028: SmallStaircase2_BannisterSmallPylon39
+    400030: SmallStaircase2_BannisterSmallPylon40
+    400032: SmallStaircase2_BannisterSmallPylon41
+    400034: SmallStaircase2_BannisterSmallPylon42
+    400036: SmallStaircase2_BannisterSmallPylon43
+    400038: SmallStaircase2_BannisterSmallPylon44
+    400040: SmallStaircase2_SmallStairs
+    400042: SmallStaircase2_SmallStairs1
+    400044: SmallStaircase2_SmallStairs_SidePanel
+    400046: SmallStaircase2_SmallStairs_SidePanel1
+    400048: SmallStaircase2_smallStairsFloors
+    400050: SmallStaircase2_StairsDownPylon1
+    400052: //RootNode
+    2300000: BannisterBoard6_SmallStaircase2
+    2300002: SmallStaircase2__Hall_SupportPillar13
+    2300004: SmallStaircase2__Hall_SupportPillar14
+    2300006: SmallStaircase2_BannisterBigPylon7
+    2300008: SmallStaircase2_BannisterBigPylon8
+    2300010: SmallStaircase2_BannisterBoard7
+    2300012: SmallStaircase2_BannisterBoard8
+    2300014: SmallStaircase2_BannisterSmallPylon32
+    2300016: SmallStaircase2_BannisterSmallPylon33
+    2300018: SmallStaircase2_BannisterSmallPylon34
+    2300020: SmallStaircase2_BannisterSmallPylon35
+    2300022: SmallStaircase2_BannisterSmallPylon36
+    2300024: SmallStaircase2_BannisterSmallPylon37
+    2300026: SmallStaircase2_BannisterSmallPylon38
+    2300028: SmallStaircase2_BannisterSmallPylon39
+    2300030: SmallStaircase2_BannisterSmallPylon40
+    2300032: SmallStaircase2_BannisterSmallPylon41
+    2300034: SmallStaircase2_BannisterSmallPylon42
+    2300036: SmallStaircase2_BannisterSmallPylon43
+    2300038: SmallStaircase2_BannisterSmallPylon44
+    2300040: SmallStaircase2_SmallStairs
+    2300042: SmallStaircase2_SmallStairs1
+    2300044: SmallStaircase2_SmallStairs_SidePanel
+    2300046: SmallStaircase2_SmallStairs_SidePanel1
+    2300048: SmallStaircase2_smallStairsFloors
+    2300050: SmallStaircase2_StairsDownPylon1
+    3300000: BannisterBoard6_SmallStaircase2
+    3300002: SmallStaircase2__Hall_SupportPillar13
+    3300004: SmallStaircase2__Hall_SupportPillar14
+    3300006: SmallStaircase2_BannisterBigPylon7
+    3300008: SmallStaircase2_BannisterBigPylon8
+    3300010: SmallStaircase2_BannisterBoard7
+    3300012: SmallStaircase2_BannisterBoard8
+    3300014: SmallStaircase2_BannisterSmallPylon32
+    3300016: SmallStaircase2_BannisterSmallPylon33
+    3300018: SmallStaircase2_BannisterSmallPylon34
+    3300020: SmallStaircase2_BannisterSmallPylon35
+    3300022: SmallStaircase2_BannisterSmallPylon36
+    3300024: SmallStaircase2_BannisterSmallPylon37
+    3300026: SmallStaircase2_BannisterSmallPylon38
+    3300028: SmallStaircase2_BannisterSmallPylon39
+    3300030: SmallStaircase2_BannisterSmallPylon40
+    3300032: SmallStaircase2_BannisterSmallPylon41
+    3300034: SmallStaircase2_BannisterSmallPylon42
+    3300036: SmallStaircase2_BannisterSmallPylon43
+    3300038: SmallStaircase2_BannisterSmallPylon44
+    3300040: SmallStaircase2_SmallStairs
+    3300042: SmallStaircase2_SmallStairs1
+    3300044: SmallStaircase2_SmallStairs_SidePanel
+    3300046: SmallStaircase2_SmallStairs_SidePanel1
+    3300048: SmallStaircase2_smallStairsFloors
+    3300050: SmallStaircase2_StairsDownPylon1
+    4300000: BannisterBoard6_SmallStaircase2
+    4300002: SmallStaircase2__Hall_SupportPillar13
+    4300004: SmallStaircase2__Hall_SupportPillar14
+    4300006: SmallStaircase2_BannisterBigPylon7
+    4300008: SmallStaircase2_BannisterBigPylon8
+    4300010: SmallStaircase2_BannisterBoard7
+    4300012: SmallStaircase2_BannisterBoard8
+    4300014: SmallStaircase2_BannisterSmallPylon32
+    4300016: SmallStaircase2_BannisterSmallPylon33
+    4300018: SmallStaircase2_BannisterSmallPylon34
+    4300020: SmallStaircase2_BannisterSmallPylon35
+    4300022: SmallStaircase2_BannisterSmallPylon36
+    4300024: SmallStaircase2_BannisterSmallPylon37
+    4300026: SmallStaircase2_BannisterSmallPylon38
+    4300028: SmallStaircase2_BannisterSmallPylon39
+    4300030: SmallStaircase2_BannisterSmallPylon40
+    4300032: SmallStaircase2_BannisterSmallPylon41
+    4300034: SmallStaircase2_BannisterSmallPylon42
+    4300036: SmallStaircase2_BannisterSmallPylon43
+    4300038: SmallStaircase2_BannisterSmallPylon44
+    4300040: SmallStaircase2_SmallStairs
+    4300042: SmallStaircase2_SmallStairs1
+    4300044: SmallStaircase2_SmallStairs_SidePanel
+    4300046: SmallStaircase2_SmallStairs_SidePanel1
+    4300048: SmallStaircase2_smallStairsFloors
+    4300050: SmallStaircase2_StairsDownPylon1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
