@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class GhostvisionMatChange : MonoBehaviour {
+    //Default material
     public Material Mat1;
+    //Material with 'See Through' highlight shader
     public Material Mat2;
 
     bool onOff = false;

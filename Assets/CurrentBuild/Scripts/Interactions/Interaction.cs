@@ -10,16 +10,17 @@ public class Interaction : MonoBehaviour {
 
 
     // interaction method for each interaction
+    // just add the name of the interaction (the object that has the an activation script and this script) followed by interaction to the list below to use the interaction.
     public void SinkInteraction()
     {
-        // this.GetComponent<waterTapScript>().isTurnedOn = !this.GetComponent<waterTapScript>().isTurnedOn;
+        
         this.GetComponentInParent<waterTapScript>().Play();
         fearingOn = !fearingOn;
     }
 
     public void TVInteraction()
     {
-        //this.GetComponent<TVScript>().isTurnedOn = !this.GetComponent<TVScript>().isTurnedOn;
+       
         this.GetComponentInParent<TVScript>().Play();
         fearingOn = !fearingOn;
     }
@@ -32,7 +33,6 @@ public class Interaction : MonoBehaviour {
 
     public void PianoInteraction()
     {
-   //     this.GetComponent<PianoPlay>().isPlaying = !this.GetComponent<PianoPlay>().isPlaying;
         this.GetComponentInParent<PianoPlay>().Play();
         fearingOn = !fearingOn;
     }
@@ -47,20 +47,17 @@ public class Interaction : MonoBehaviour {
     {
         Debug.Log(this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).name);
         Debug.Log(this.transform.parent.transform.parent.transform.GetChild(0).name);
-        if (this.transform.parent.transform.parent.transform.GetChild(0).name != "SingleDoor") {
-            if (!this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).GetComponent<LockDoor>().locked)
-            {
+        if (this.transform.parent.transform.parent.transform.GetChild(0).name != "SingleDoor")
+        {
                 this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().open = !this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().open;
                 this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().squeek();
-            }
+            
         }
         else
         {
-            if (!this.transform.parent.transform.parent.transform.GetChild(0).GetComponent<LockDoor>().locked)
-            {
                 this.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().open = !this.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().open;
                 this.transform.parent.transform.parent.transform.GetChild(0).GetComponent<DoorScript>().squeek();
-            }
+            
         }
     }
 
@@ -85,6 +82,7 @@ public class Interaction : MonoBehaviour {
     public void SpiegelInteraction()
     {
         this.GetComponentInParent<spiegelActive>().Break();
+        fearingOn = true;
     }
 
     public void SprinklerInteraction()
@@ -116,14 +114,10 @@ public class Interaction : MonoBehaviour {
         this.transform.parent.transform.parent.transform.parent.transform.GetChild(0).GetComponent<LockDoor>().activated = true;
     }
 
+    // old candle activation still being called sometimes so it stays to avoid errors.
+    
     public void CandleInteraction()
-    {
-        this.GetComponentInParent<CandleOnandOff>().Check();
-    }
-
-    public void MailBoxInteraction()
-    {
-
-        this.GetComponentInChildren<MailBox>().Activate();
+    { 
+       
     }
 }

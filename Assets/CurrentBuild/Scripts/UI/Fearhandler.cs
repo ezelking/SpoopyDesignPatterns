@@ -14,15 +14,9 @@ public class Fearhandler : MonoBehaviour {
     public Scrollbar scrollie;
     public bool winner = false;
     public GameObject levelComplete;
-
-    // Use this for initialization
-    void Start () {
 	
-	}
-	
-	// Update is called once per frame
 	void Update () {
-        if (!winner)
+        if (!winner) // if bar is not full do your thing else stop decaying. 
         {
             if (fearCurrent >= fearMax)
             {
@@ -36,12 +30,12 @@ public class Fearhandler : MonoBehaviour {
         fearprogres = 1f * (float)fearCurrent / (float)fearMax;
         scrollie.size = fearprogres;
 	}
-
+    // method to scare residents
     public void GetFearedBrother(int fearAmount)
     {
         fearCurrent += fearAmount;
     }
-
+   
     void SteadyDecay(int decayAmount)
     {
         timerSec -= Time.deltaTime;

@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ExorcistMovement : MonoBehaviour {
+    //script derived from resident movement script
 
     [HideInInspector]public GameObject[] currentRoomWPs;
     [HideInInspector]public string currentRoom;

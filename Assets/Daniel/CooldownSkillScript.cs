@@ -4,15 +4,14 @@ using UnityEngine.UI;
 
 public class CooldownSkillScript : MonoBehaviour {
     public Image lockImage;
+    // Enter CooldownTime of skill
     public float duration = 5;
 
-    // Use this for initialization
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (lockImage.fillAmount >= 0)

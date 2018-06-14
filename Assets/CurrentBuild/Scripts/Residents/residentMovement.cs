@@ -103,7 +103,7 @@ public class residentMovement : MonoBehaviour
 
 
 
-
+//Character moves to points in CurrentRoomWPs and performAction at named ones. If Currentroom differs from Targetroom, the new WPs will be loaded into currentRoomWPs.
     public void Roaming()
     {
         currentState = "roaming";
@@ -144,13 +144,6 @@ public class residentMovement : MonoBehaviour
 
         agent.SetDestination(targetPosition);
 
-
-        if (agent.remainingDistance <= 5)
-        {
-            
-        }
-
-
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             this.transform.Rotate(0, searchingTurnSpeed * Time.deltaTime, 0);
@@ -173,7 +166,7 @@ public class residentMovement : MonoBehaviour
 
 
 
-
+    // make character go to location
     public void goToTarget(Vector3 targetPosition)
     {
         agent.SetDestination(targetPosition);
@@ -188,7 +181,7 @@ public class residentMovement : MonoBehaviour
         newRoomCount = 0f;
     }
 
-
+    // Look for new waypoint in currentrooms array.
     public void SetNewDestination()
     {
         GameObject newTargetWaypoint = currentRoomWPs[Random.Range(0, currentRoomWPs.Length)];
@@ -202,7 +195,7 @@ public class residentMovement : MonoBehaviour
 
     }
 
-
+    // perform action based on the target WPs name, Duration and actions can be customized per WP name. If name of WP is unknown, char will just set new destination without timer.
     public void performAction(string actionName)
     {
         switch (actionName)
@@ -260,7 +253,7 @@ public class residentMovement : MonoBehaviour
         newRoomCount += 1;
     }
 
-
+// Character runs to point "killSpot" and be set to inactive.
     public void FleeFromHouse()
     {
         currentState = "GTFO";
@@ -307,7 +300,7 @@ public class residentMovement : MonoBehaviour
     }
     */
 
-
+// Character hides in their favorite hiding spot aka "residentSanctuary"
     public void FleeToSanctuary()
     {
         currentState = "scared";

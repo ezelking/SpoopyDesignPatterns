@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class cleansingRoom : MonoBehaviour {
-
     ExorcistMovement eMove;
     public GameObject player;
 
@@ -25,6 +24,7 @@ public class cleansingRoom : MonoBehaviour {
         }*/
     }
 
+    //time expires you diededed
     void Exorcism()
     {
         eTimer += Time.deltaTime;

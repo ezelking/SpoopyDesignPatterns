@@ -3,6 +3,7 @@ using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
 public class MotionBlurPlayer : MonoBehaviour {
+    //mah beauty motionblur for the exorcist, attached to the player
 
     //distance player and exorcist
     public Transform exorcist;
@@ -28,12 +29,15 @@ public class MotionBlurPlayer : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         distanceExorcist = Vector3.Distance(playerCam.transform.position, exorcist.position);
-        //Debug.Log(distanceExorcist);
+        //Debug.Log(distanceExorcist); //eheck if it actually came up, works ... you know...
+        //if the player and the exorcist are in range if each other the motionblur activates
+        //also a timer for a feature that isn't completed
         if (distanceExorcist <= minDistance && timerOn == false)
         {
             timerOn = true;
             blurr();
         }
+        //sets the motionblur amount to 0 when the player and the exorcist aren't in range anymore
         if (distanceExorcist > minDistance)
         {
             timerOn = false;
@@ -41,6 +45,7 @@ public class MotionBlurPlayer : MonoBehaviour {
         }
     }
 
+    //depending the distance of the player and the exorcist is the blurr amount set
     public void blurr()
     {
         if(distanceExorcist > minDistance)

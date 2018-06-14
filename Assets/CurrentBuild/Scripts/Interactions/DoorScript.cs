@@ -8,14 +8,11 @@ public class DoorScript : MonoBehaviour
     Transform Door;
     Transform LeftDoor;
     Transform RightDoor;
-    public GameObject Handle;
-    public GameObject Handle2;
 
     UnityEngine.AI.NavMeshObstacle obstacle;
     public bool locked;
     public bool activated;
-
-    // Use this for initialization
+    
     void Start()
     {
         open = true;
@@ -32,8 +29,7 @@ public class DoorScript : MonoBehaviour
         obstacle = GetComponent<UnityEngine.AI.NavMeshObstacle>();
         locked = false;
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         if (this.transform.name == "SingleDoor")
@@ -45,7 +41,7 @@ public class DoorScript : MonoBehaviour
             else if (!open && Door.localRotation.y < 0)
             {
                 Door.localEulerAngles = new Vector3(Door.localEulerAngles.x, 0f, Door.localEulerAngles.z);
-                locked = true;
+                Lock();
                 squeekSound.Stop();
             }
             if (open && Door.localRotation.y < 0.7)
@@ -69,7 +65,7 @@ public class DoorScript : MonoBehaviour
             {
                 LeftDoor.localEulerAngles = new Vector3(LeftDoor.localEulerAngles.x, 0f, LeftDoor.localEulerAngles.z);
                 RightDoor.localEulerAngles = new Vector3(RightDoor.localEulerAngles.x, 0f, RightDoor.localEulerAngles.z);
-                locked = true;
+                Lock();
                 squeekSound.Stop();
             }
             if (open && LeftDoor.localRotation.y < 0.7)
@@ -88,7 +84,7 @@ public class DoorScript : MonoBehaviour
             {
                 locked = false;
             }
-            obstacle.enabled = locked;
+            obstacle.enabled = locked; // Makes it an obstacle for residents if locked.
         }
     }
 
@@ -97,24 +93,17 @@ public class DoorScript : MonoBehaviour
         squeekSound.Play();
     }
 
-    void OnDrawGizmosSelected()
+    public void Lock()
     {
-        Gizmos.color = new Color(1, 1, 0, 0.75F);
-        if (open)
+        // Unlocks all doors then afterwards only locks this particular doors.
+        for (int i = 0; i < transform.parent.parent.childCount; i++)
         {
-            Gizmos.DrawRay(Handle.transform.position, (Handle.transform.TransformDirection(Handle.transform.forward) * -2));
-            if (this.transform.name == "DoubleDoor")
-            {
-                Gizmos.DrawRay(Handle2.transform.position, (Handle2.transform.TransformDirection(Handle2.transform.forward) * -2));
+            if (transform.parent.parent.GetChild(i).name.Contains("DoorInteraction") && transform.parent.parent.GetChild(i).GetChild(0).GetComponent<DoorScript>().locked) {
+                transform.parent.parent.GetChild(i).GetChild(0).GetComponent<DoorScript>().open = true;
             }
         }
-        else
-        {
-            Gizmos.DrawRay(Handle.transform.position, (Handle.transform.TransformDirection(Handle.transform.forward) * 2));
-            if (this.transform.name == "DoubleDoor")
-            {
-                Gizmos.DrawRay(Handle2.transform.position, (Handle2.transform.TransformDirection(Handle2.transform.forward) * 2));
-            }
-        }
+        locked = true;
+
+
     }
 }

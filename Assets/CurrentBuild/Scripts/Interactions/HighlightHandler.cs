@@ -9,16 +9,16 @@ public class HighlightHandler : MonoBehaviour {
 
 
 
-    void Awake()
+    void Awake() 
     {
         shadedObject = this.gameObject;
     }
-    void Start () {
+    void Start () { // Makes it possible to use one shader for all the highlights but with different settings
         shadedObject.GetComponent<Renderer>().material.SetFloat("_Outline", value);
         shadedObject.GetComponent<Renderer>().material.SetColor("_OutlineColor", valueC);
     }
 	
-	// Update is called once per frame
+
 	void Update () {
         shadedObject.GetComponent<Renderer>().material.SetFloat("_Outline", value);
         shadedObject.GetComponent<Renderer>().material.SetColor("_OutlineColor", valueC);

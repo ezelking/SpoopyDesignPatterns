@@ -23,7 +23,7 @@ public class ClockManager : MonoBehaviour
     public Transform hours, minutes, seconds;
 
     public int strikes;
-   
+   // converts time from minutes to clock hours, seconds to clock minutes and miliseconds to clock seconds.
     void Update()
     {       
             timerSec -= Time.deltaTime;
