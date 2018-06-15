@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VaseScript : MonoBehaviour {
+public class VaseScript : MonoBehaviour, IInteractable
+{
 
-    public GameObject fearCollector; 
+    public GameObject fearCollector;
     bool startedThePush = false;
     float startHeight;
     private AudioSource breakSound;
@@ -11,27 +12,31 @@ public class VaseScript : MonoBehaviour {
     [Range(0.0F, 2.0F)] public float strength = 1;
 
     bool broken;
-    
-    void Start () {
+
+
+
+    void Start()
+    {
         fearCollector = GameObject.Find("FearCollector");
         breakSound = GetComponent<AudioSource>();
         startHeight = this.transform.position.y;
         rb = GetComponent<Rigidbody>();
         broken = false;
-	}
-	
-	void FixedUpdate () {
+    }
+
+    void FixedUpdate()
+    {
         if (this.transform.position.y < startHeight - 1 && rb.velocity.y >= -0.001 && !broken)
         {
             Break();
         }
 
-       if( gameObject.transform.GetChild(2).childCount <= 0)
+        if (gameObject.transform.GetChild(2).childCount <= 0)
         {
             fearCollector.GetComponent<Fearing>().interactions.Remove(gameObject);
             Destroy(gameObject);
         }
-	}
+    }
 
     // Replaces the vase for shatters.
     public void Break()
@@ -45,7 +50,7 @@ public class VaseScript : MonoBehaviour {
         broken = true;
     }
 
-    public void Push()
+    public void Interact()
     {
         if (!startedThePush)
         {

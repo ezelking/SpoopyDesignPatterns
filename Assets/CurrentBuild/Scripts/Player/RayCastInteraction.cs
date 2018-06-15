@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RayCastInteraction : MonoBehaviour {
+public class RayCastInteraction : MonoBehaviour
+{
     public int range;
     public GameObject[] highlights;
 
-	void Start () {
+    void Start()
+    {
 
-      
+
         highlights = GameObject.FindGameObjectsWithTag("Highlight");
         Screen.lockCursor = true;
         Cursor.visible = false;
@@ -16,17 +18,18 @@ public class RayCastInteraction : MonoBehaviour {
     void FixedUpdate()
     {
 
-            foreach (GameObject highlightarea in highlights)
-            {
+        foreach (GameObject highlightarea in highlights)
+        {
             if (highlightarea != null)
             {
                 highlightarea.SetActive(false);
             }
-            }
-        
+        }
+
     }
-	void Update () {
-   
+    void Update()
+    {
+
 
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
@@ -34,7 +37,7 @@ public class RayCastInteraction : MonoBehaviour {
         // Casts the ray and get the first game object hit
         Physics.Raycast(ray, out hit, range);
         if (Physics.Raycast(ray, out hit, range))
-        { 
+        {
             if (hit.collider.gameObject.layer == 11) // layer 11 = interaction layer
             {
 
@@ -42,8 +45,8 @@ public class RayCastInteraction : MonoBehaviour {
                 // after hitting a object in the interaction layer it tries to find the method that is his name plus interaction inside the interaction script.
                 if (Input.GetMouseButtonUp(0))
                 {
-                    string temp = hit.collider.gameObject.name + "Interaction";
-                    hit.collider.gameObject.GetComponent<Interaction>().Invoke(temp,0);
+                    hit.collider.gameObject.GetComponent<IInteractable>().Interact();
+                    hit.collider.gameObject.GetComponent<IFearing>().ToggleFearing();
                 }
 
 

@@ -39,7 +39,7 @@ public class Interaction : MonoBehaviour {
 
     public void VaseInteraction()
     {
-        this.GetComponentInParent<VaseScript>().Push();
+        this.GetComponentInParent<VaseScript>().Interact();
         fearingOn = true;
     }
 
