@@ -45,6 +45,7 @@ public class NewBookcaseScript : MonoBehaviour
             {
                 GetComponent<Interaction>().fearingOn = false;
             }
+
             if (resetTimer > 200)
             {
                 Reset();
@@ -57,12 +58,16 @@ public class NewBookcaseScript : MonoBehaviour
     {
         for (int i = 0; i < books.transform.childCount; i++)
         {
-            Destroy(books.transform.GetChild(i).GetChild(0).gameObject);
-            GameObject Book = Instantiate(bookPrefab);
-            Book.transform.parent = books.transform.GetChild(i);
-            Book.transform.localPosition = new Vector3(0, 0, 0);
-            Book.transform.localRotation = new Quaternion(0, 0, 0, 0);
-            Book.transform.localScale = new Vector3(1, 1, 1);
+
+            GameObject book = ObjectPooler.SharedInstance.GetPooledObject();
+            if (book != null)
+            {
+                book.transform.parent = books.transform.GetChild(i);
+                book.transform.localPosition = new Vector3(0, 0, 0);
+                book.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                book.transform.localScale = new Vector3(1, 1, 1);
+            }
+            
         }
         activated = false;
         inCase = true;
