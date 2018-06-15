@@ -59,13 +59,11 @@ public class NewBookcaseScript : MonoBehaviour
     // Replaces the old books for new books.
     void Reset()
     {
-        for (int i = 0; i < books.transform.childCount; i++)
+        foreach (Transform bookHolder in books.transform)
         {
-            GameObject book = ObjectPooler.SharedInstance.GetPooledObject();
-
-            if (books.transform.GetChild(i).childCount > 0)
+            if (bookHolder.childCount > 0)
             {
-                GameObject oldBook = books.transform.GetChild(i).GetChild(0).gameObject;
+                GameObject oldBook = bookHolder.GetChild(0).gameObject;
                 ObjectPooler.SharedInstance.pooledObjects.Add(oldBook);
                 oldBook.SetActive(false);
                 oldBook.transform.parent = ObjectPooler.SharedInstance.transform;
@@ -75,9 +73,10 @@ public class NewBookcaseScript : MonoBehaviour
 
             }
 
+            GameObject book = ObjectPooler.SharedInstance.GetPooledObject();
             if (book != null)
             {
-                book.transform.parent = books.transform.GetChild(i);
+                book.transform.parent = bookHolder;
                 book.transform.localPosition = new Vector3(0, 0, 0);
                 book.transform.localRotation = new Quaternion(0, 0, 0, 0);
                 book.transform.localScale = new Vector3(1, 1, 1);
