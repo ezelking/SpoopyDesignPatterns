@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 60c7070f53cb14844b51403890306c05
+timeCreated: 1480640175
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: HallFloor1_Plafonds
+    100002: //RootNode
+    100004: Plafonds__L_WalkwayFloor
+    100006: Plafonds__L_WalkwayFloor1
+    100008: Plafonds__L_WalkwayFloor2
+    100010: Plafonds__L_WalkwayFloor3
+    100012: Plafonds__R_Plafond
+    100014: Plafonds__R_VloerBoven
+    100016: Plafonds_HallFloor
+    100018: Plafonds_HallFloor2
+    100020: Plafonds_HallFloor3
+    100022: Plafonds_pPlane30
+    100024: Plafonds_pPlane31
+    400000: HallFloor1_Plafonds
+    400002: //RootNode
+    400004: Plafonds__L_WalkwayFloor
+    400006: Plafonds__L_WalkwayFloor1
+    400008: Plafonds__L_WalkwayFloor2
+    400010: Plafonds__L_WalkwayFloor3
+    400012: Plafonds__R_Plafond
+    400014: Plafonds__R_VloerBoven
+    400016: Plafonds_HallFloor
+    400018: Plafonds_HallFloor2
+    400020: Plafonds_HallFloor3
+    400022: Plafonds_pPlane30
+    400024: Plafonds_pPlane31
+    2300000: HallFloor1_Plafonds
+    2300002: Plafonds__L_WalkwayFloor
+    2300004: Plafonds__L_WalkwayFloor1
+    2300006: Plafonds__L_WalkwayFloor2
+    2300008: Plafonds__L_WalkwayFloor3
+    2300010: Plafonds__R_Plafond
+    2300012: Plafonds__R_VloerBoven
+    2300014: Plafonds_HallFloor
+    2300016: Plafonds_HallFloor2
+    2300018: Plafonds_HallFloor3
+    2300020: Plafonds_pPlane30
+    2300022: Plafonds_pPlane31
+    3300000: HallFloor1_Plafonds
+    3300002: Plafonds__L_WalkwayFloor
+    3300004: Plafonds__L_WalkwayFloor1
+    3300006: Plafonds__L_WalkwayFloor2
+    3300008: Plafonds__L_WalkwayFloor3
+    3300010: Plafonds__R_Plafond
+    3300012: Plafonds__R_VloerBoven
+    3300014: Plafonds_HallFloor
+    3300016: Plafonds_HallFloor2
+    3300018: Plafonds_HallFloor3
+    3300020: Plafonds_pPlane30
+    3300022: Plafonds_pPlane31
+    4300000: HallFloor1_Plafonds
+    4300002: Plafonds__L_WalkwayFloor
+    4300004: Plafonds__L_WalkwayFloor1
+    4300006: Plafonds__L_WalkwayFloor2
+    4300008: Plafonds__L_WalkwayFloor3
+    4300010: Plafonds__R_Plafond
+    4300012: Plafonds__R_VloerBoven
+    4300014: Plafonds_HallFloor
+    4300016: Plafonds_HallFloor2
+    4300018: Plafonds_HallFloor3
+    4300020: Plafonds_pPlane30
+    4300022: Plafonds_pPlane31
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
