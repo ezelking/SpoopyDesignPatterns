@@ -62,14 +62,27 @@ public class NewBookcaseScript : MonoBehaviour
         for (int i = 0; i < books.transform.childCount; i++)
         {
             GameObject book = ObjectPooler.SharedInstance.GetPooledObject();
+
+            if (books.transform.GetChild(i).childCount > 0)
+            {
+                GameObject oldBook = books.transform.GetChild(i).GetChild(0).gameObject;
+                ObjectPooler.SharedInstance.pooledObjects.Add(oldBook);
+                oldBook.SetActive(false);
+                oldBook.transform.parent = ObjectPooler.SharedInstance.transform;
+                oldBook.transform.localPosition = new Vector3(0, 0, 0);
+                oldBook.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                oldBook.transform.localScale = new Vector3(1, 1, 1);
+
+            }
+
             if (book != null)
             {
                 book.transform.parent = books.transform.GetChild(i);
                 book.transform.localPosition = new Vector3(0, 0, 0);
                 book.transform.localRotation = new Quaternion(0, 0, 0, 0);
                 book.transform.localScale = new Vector3(1, 1, 1);
+                book.SetActive(true);
             }
-            
         }
         activated = false;
         inCase = true;
