@@ -10,13 +10,13 @@ public class NewBookcaseScript : MonoBehaviour
     Transform[] bookTransforms;
     int resetTimer;
     
-    void Start()
+   private void Start()
     {
         activated = false;
         inCase = true;
         books = transform.Find("Books").gameObject;
         bookTransforms = new Transform[books.transform.childCount];
-
+        Reset();
         // Saves the sizes and placement of all the books in the case.
         for (int i = 0; i < books.transform.childCount; i++)
         {
@@ -32,8 +32,11 @@ public class NewBookcaseScript : MonoBehaviour
             // Pushes all the books in the case.
             for (int i = 0; i < books.transform.childCount; i++)
             {
-                books.transform.GetChild(i).GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * Random.Range(100, 200));
-                activated = false;
+                if (books.transform.GetChild(i).childCount > 0)
+                {
+                    books.transform.GetChild(i).GetChild(0).gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * Random.Range(100, 200));
+                    activated = false;
+                }
             }
             inCase = false;
         }
@@ -58,7 +61,6 @@ public class NewBookcaseScript : MonoBehaviour
     {
         for (int i = 0; i < books.transform.childCount; i++)
         {
-
             GameObject book = ObjectPooler.SharedInstance.GetPooledObject();
             if (book != null)
             {
